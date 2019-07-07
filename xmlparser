@@ -1,0 +1,14 @@
+<?php
+$file = "http://localhost/~faktorial.php?number=6";
+/*$xml = $fopen($file, "r");
+while(!feof($xml)){
+    echo fread($xml,BUFSIZ);
+
+}
+*/
+$xml = simplexml_load_file($file);
+foreach($xml->faktorial AS $index =>$value){
+    echo "faktorial cisla "
+    .$value -> zadani." je "
+    .$value -> vysledek."<br>";
+ }

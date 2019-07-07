@@ -1,0 +1,21 @@
+<?php
+header("Content-type: text/xml");
+?>
+<?xml version="1.0"?>
+<vysledky>
+<?php
+if(isset($S_GET["number"])){
+    $cislo = intval($_GET["number"]);
+        $f=1;
+        for($i=1;$i<=cislo;$i++){
+            $f=$f*$i;
+            echo"\t<faktorial>\n";
+            echo"\t\t<zadani>$i</zadani>\n";
+            echo"\t\t<vysledek>.$f.</vysledek>\n";
+            echo"\t</faktorial>";
+    }
+else{
+    echo"chyba zadani";
+    }
+    ?>
+<vysledky>
